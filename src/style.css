@@ -21,7 +21,7 @@ body {
   color: var(--color-text);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  font-family: "Lato", Avenir, Adobe Heiti Std, Segoe UI, Trebuchet MS,
+  font-family: "Spartan", Avenir, Adobe Heiti Std, Segoe UI, Trebuchet MS,
     sans‑serif;
 }
 
@@ -166,6 +166,7 @@ h1 {
 }
 .blob-text {
   font-family: "Spartan";
+  font-weight: bold;
   letter-spacing: 1px;
   color: currentColor;
 }
