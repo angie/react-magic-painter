@@ -32,7 +32,7 @@ export const Toolbar: React.FC<any> = ({
       <div className="tool-section tool-section--lrg">
         <div className="tool-section">
           <small>
-            <strong>Brush color</strong>
+            <strong>Brush colour</strong>
           </small>
         </div>
         <input
