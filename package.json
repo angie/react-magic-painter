@@ -36,5 +36,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-xo-react": "^0.25.0",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "xo": "^0.46.4"
+  },
+  "xo": {
+    "extends": "xo-react",
+    "space": true,
+    "rules": {
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "@typescript-eslint/triple-slash-reference": "off",
+      "react/react-in-jsx-scope": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/filename-case": "off"
+    }
   }
 }
