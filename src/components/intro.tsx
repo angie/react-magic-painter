@@ -25,6 +25,7 @@ export const Intro: React.FC<Props> = () => (
   <header className="intro">
     <div className="intro__content">
       <h1>Drawing Check-Ins</h1>
+      <p>Prototype drawing prompts for lessons.</p>
       <Button question="How was your weekend?" path="weekend"/>
       <Button question="Circle the correct answer" path="circle"/>
       <Button question="Underline nouns" path="nouns"/>
