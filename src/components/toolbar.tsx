@@ -40,8 +40,7 @@ export const Toolbar: React.FC<any> = ({
           className="btn--color"
           type="color"
           id="toolColorPicker"
-          onChange={handleColor}
-        />
+          onChange={handleColor}/>
       </div>
       <div className="tool-section">
         <small>
@@ -51,9 +50,7 @@ export const Toolbar: React.FC<any> = ({
       <div className="tool-grid tool-section tool-section--lrg">
         <div>
           <button
-            className={`btn btn--tool ${
-              isRegularMode && !isEraser ? 'btn--active' : ''
-            }`}
+            className={`btn btn--tool ${isRegularMode && !isEraser ? 'btn--active' : ''}`}
             type="button"
             onClick={handleRegularMode}
           >
@@ -62,9 +59,7 @@ export const Toolbar: React.FC<any> = ({
         </div>
         <div>
           <button
-            className={`btn btn--tool ${
-              isRegularMode ? '' : 'btn--dream-active'
-            }`}
+            className={`btn btn--tool ${isRegularMode ? '' : 'btn--dream-active'}`}
             type="button"
             onClick={handleSpecialMode}
           >
@@ -73,9 +68,7 @@ export const Toolbar: React.FC<any> = ({
         </div>
         <div>
           <button
-            className={`btn btn--tool ${
-              isEraser ? 'btn--eraser-active' : ''
-            }`}
+            className={`btn btn--tool ${isEraser ? 'btn--eraser-active' : ''}`}
             type="button"
             onClick={handleEraserMode}
           >
@@ -89,13 +82,10 @@ export const Toolbar: React.FC<any> = ({
             id="tool-autowidth"
             type="checkbox"
             title="Dynamic brush size"
-            onChange={setAutoWidth}
-          />{' '}
+            onChange={setAutoWidth}/>{' '}
           <label
             htmlFor="tool-autowidth"
-            className={`btn btn--tool ${
-              isAutoWidth ? 'btn--width-active' : ''
-            }`}
+            className={`btn btn--tool ${isAutoWidth ? 'btn--width-active' : ''}`}
           >
             <FontAwesomeIcon icon={faArrowsAltH}/>
           </label>
@@ -110,12 +100,11 @@ export const Toolbar: React.FC<any> = ({
           </div>
           <div className="tool-section">
             <input
-              defaultValue="50"
+              defaultValue="10"
               type="range"
-              min="10"
+              min="1"
               max="90"
-              onChange={handleWidth}
-            />
+              onChange={handleWidth}/>
           </div>
         </div>
       )}
@@ -135,8 +124,7 @@ export const Toolbar: React.FC<any> = ({
               type="range"
               min="0"
               max="100"
-              onChange={setCurrentSaturation}
-            />
+              onChange={setCurrentSaturation}/>
           </div>
           <label>
             <small>Lightness</small>
@@ -146,8 +134,7 @@ export const Toolbar: React.FC<any> = ({
             type="range"
             min="0"
             max="100"
-            onChange={setCurrentLightness}
-          />
+            onChange={setCurrentLightness}/>
         </div>
       )}
     </div>
