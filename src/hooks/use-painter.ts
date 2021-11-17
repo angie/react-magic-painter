@@ -108,7 +108,7 @@ export const usePainter = () => {
     isDrawing.current = false;
   }, []);
 
-  const init = useCallback(() => {
+  const init = useCallback((): void => {
     ctx.current = canvas?.current?.getContext('2d');
     if (canvas?.current && ctx?.current) {
       canvas.current.addEventListener('mousedown', handleMouseDown);
