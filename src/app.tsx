@@ -27,11 +27,19 @@ const App = () => {
       routes={[
         {
           path: '/',
-          element: <Intro isReady={isReady}/>,
+          element: <Intro/>,
         },
         {
-          path: 'draw',
-          element: <DrawingPage><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
+          path: 'weekend',
+          element: <DrawingPage prompt="Draw a picture to show the class what you did at the weekend"><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
+        },
+        {
+          path: 'circle',
+          element: <DrawingPage prompt="Circle the toucan in the image below"><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
+        },
+        {
+          path: 'nouns',
+          element: <DrawingPage prompt="Underline the nouns in the exerpt below"><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
         },
       ]}
     />

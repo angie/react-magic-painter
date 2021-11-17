@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import {TeacherPrompt} from './prompt';
 
-export const DrawingPage: React.FC<any> = ({children}) => {
+interface Props {
+  prompt: string;
+}
+
+export const DrawingPage: React.FC<Props> = ({prompt, children}) => {
   const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -13,6 +16,6 @@ export const DrawingPage: React.FC<any> = ({children}) => {
     flex-direction: row;
   `;
 
-  return <Wrapper><TeacherPrompt/><CanvasWrapper>{children}</CanvasWrapper></Wrapper>;
+  return <Wrapper><h2>{prompt}</h2><CanvasWrapper>{children}</CanvasWrapper></Wrapper>;
 };
 
