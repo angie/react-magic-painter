@@ -2,6 +2,7 @@ import {useCallback, useState} from 'react';
 import {ReactLocation, Router} from 'react-location';
 import {Intro} from './components/intro';
 import {PaintTool} from './components/paint-tool';
+import {DrawingPage} from './components/drawing-page';
 import {usePainter} from './hooks/use-painter';
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
         },
         {
           path: 'draw',
-          element: <PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/>,
+          element: <DrawingPage><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
         },
       ]}
     />
