@@ -1,8 +1,8 @@
 import {useCallback, useState} from 'react';
-import {Canvas} from './components/Canvas';
-import {Goo} from './components/Goo';
-import {Intro} from './components/Intro';
-import {Toolbar} from './components/Toolbar';
+import {Canvas} from './components/canvas';
+import {Goo} from './components/goo';
+import {Intro} from './components/intro';
+import {Toolbar} from './components/toolbar';
 import {usePainter} from './hooks/use-painter';
 
 const App = () => {

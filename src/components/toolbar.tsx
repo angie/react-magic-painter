@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React from 'react';
-import {BrushPreview} from './BrushPreview';
+import {BrushPreview} from './brush-preview';
 
 export const Toolbar: React.FC<any> = ({
   currentWidth,

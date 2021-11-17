@@ -52,8 +52,7 @@
       "@typescript-eslint/naming-convention": "off",
       "@typescript-eslint/triple-slash-reference": "off",
       "react/react-in-jsx-scope": "off",
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/filename-case": "off"
+      "unicorn/prevent-abbreviations": "off"
     }
   }
 }
