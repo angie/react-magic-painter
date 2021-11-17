@@ -1,9 +1,7 @@
 import {useCallback, useState} from 'react';
 import {ReactLocation, Router} from 'react-location';
-import {Canvas} from './components/canvas';
-import {Goo} from './components/goo';
 import {Intro} from './components/intro';
-import {Toolbar} from './components/toolbar';
+import {PaintTool} from './components/paint-tool';
 import {usePainter} from './hooks/use-painter';
 
 const App = () => {
@@ -32,12 +30,7 @@ const App = () => {
         },
         {
           path: 'draw',
-          element:
-  <>
-    <Toolbar {...toolbarProps}/>
-    <Canvas width={state.currentWidth} init={init} canvasRef={canvas}/>
-    <Goo/>
-  </>,
+          element: <PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/>,
         },
       ]}
     />
