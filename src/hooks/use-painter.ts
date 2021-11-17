@@ -192,6 +192,13 @@ export const usePainter = () => {
     }
   };
 
+  const setImage = (src: string): void => {
+    console.log(ctx);
+    const image = new Image(); // Using optional size for image
+    image.src = src;
+    image.addEventListener('load', () => ctx?.current?.drawImage(image, 0, 0));
+  };
+
   return [
     {
       canvas,
@@ -213,6 +220,7 @@ export const usePainter = () => {
       setAutoWidth,
       setCurrentSaturation,
       setCurrentLightness,
+      setImage,
     },
   ];
 };

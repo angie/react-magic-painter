@@ -27,15 +27,16 @@ interface ToolbarProps extends State {
 
 interface Props {
   toolbarProps: ToolbarProps;
+  setImage?: () => void;
   state: State;
   init?: () => void;
   canvas: any;
 }
 
-export const PaintTool: React.FC<Props> = ({toolbarProps, state, init, canvas}) => (
+export const PaintTool: React.FC<Props> = ({toolbarProps, setImage, state, init, canvas}) => (
   <>
     <Toolbar {...toolbarProps}/>
-    <Canvas width={state.currentWidth} init={init} canvasRef={canvas}/>
+    <Canvas width={state.currentWidth} init={init} canvasRef={canvas} setImage={setImage}/>
     <Goo/>
   </>
 );

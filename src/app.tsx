@@ -1,5 +1,7 @@
 import {useCallback, useState} from 'react';
 import {ReactLocation, Router} from 'react-location';
+import animals from './images/animals.png';
+import words from './images/words.jpg';
 import {Intro} from './components/intro';
 import {PaintTool} from './components/paint-tool';
 import {DrawingPage} from './components/drawing-page';
@@ -7,7 +9,7 @@ import {usePainter} from './hooks/use-painter';
 
 const App = () => {
   const [dateUrl, setDataUrl] = useState('#');
-  const [{canvas, isReady, ...state}, {init, ...api}] = usePainter();
+  const [{canvas, isReady, ...state}, {init, setImage, ...api}] = usePainter();
 
   const handleDownload = useCallback(() => {
     if (!canvas || !canvas.current) {
@@ -35,11 +37,22 @@ const App = () => {
         },
         {
           path: 'circle',
-          element: <DrawingPage prompt="Circle the toucan in the image below"><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
+          element: <DrawingPage prompt="Circle the toucan in the image below"><PaintTool
+            toolbarProps={toolbarProps} state={state} canvas={canvas}
+            setImage={() => {
+              setImage?.(animals);
+            }}
+            init={init}/>
+          </DrawingPage>,
         },
         {
           path: 'nouns',
-          element: <DrawingPage prompt="Underline the nouns in the exerpt below"><PaintTool toolbarProps={toolbarProps} state={state} canvas={canvas} init={init}/></DrawingPage>,
+          element: <DrawingPage prompt="Underline the nouns in the exerpt below"><PaintTool
+            toolbarProps={toolbarProps} state={state} canvas={canvas}
+            setImage={() => {
+              setImage?.(words);
+            }} init={init}/>
+          </DrawingPage>,
         },
       ]}
     />

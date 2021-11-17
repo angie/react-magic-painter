@@ -16,6 +16,5 @@ export const DrawingPage: React.FC<Props> = ({prompt, children}) => {
     flex-direction: row;
   `;
 
-  return <Wrapper><h2>{prompt}</h2><CanvasWrapper>{children}</CanvasWrapper></Wrapper>;
+  return <Wrapper><h2 style={{paddingLeft: '16px'}}>{prompt}</h2><CanvasWrapper>{children}</CanvasWrapper></Wrapper>;
 };
-

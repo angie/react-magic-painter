@@ -3,12 +3,14 @@ import React, {useEffect} from 'react';
 interface Props {
   canvasRef?: React.MutableRefObject<HTMLCanvasElement | undefined>;
   init?: () => void;
+  setImage?: () => void;
   width?: number;
 }
 
-export const Canvas: React.FC<Props> = ({canvasRef, init, width}) => {
+export const Canvas: React.FC<Props> = ({canvasRef, setImage, init, width}) => {
   useEffect(() => {
-    init?.();
+    init?.(); // Initialise canvas and listeners
+    setImage?.(); // Set image background if provided
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const widthHalf = width ? width / 2 : 0;
